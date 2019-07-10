@@ -1,7 +1,5 @@
 
 
-
-
 # SpringBootWebshell
 
 Springboot的一个webshell。
@@ -32,7 +30,7 @@ Springboot的一个webshell。
     │   └── webapp
     │       ├── WEB-INF
     │       │   └── web.xml
-    │       ├── cs.jsp						---	菜刀马，密码pass
+    │       ├── cs.jsp						---	菜刀马，密码pass(已删除)
     │       ├── shell.jsp					---	冰蝎自带shell，密码pass
     │       ├── shell.jspx				---	冰蝎自带shell，密码pass
     │       └── test.jsp					---	测试文件，输出hello world
@@ -58,7 +56,7 @@ Springboot的一个webshell。
 cd target
 java -jar SpringBootWebshll-1.0.war
 ```
-
+>默认端口为8012，可以在application.properties中配置。
 
 
 #### cmdshell
@@ -79,7 +77,7 @@ http://127.0.0.1:8012/cmd
 
 #### jsp shell
 
- 菜刀马：http://127.0.0.1:8012/cs.jsp 密码：pass
+ ~~菜刀马：http://127.0.0.1:8012/cs.jsp 密码：pass~~~~[已删除]
 
 
 
